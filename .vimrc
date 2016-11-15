@@ -1,8 +1,10 @@
-set exrc
-set secure
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set noexpandtab
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'valloric/YouCompleteMe'
+call vundle#end()
+filetype plugin indent on
 

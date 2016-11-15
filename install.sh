@@ -19,3 +19,7 @@ ln -s $PWD/.vimrc ~/.vimrc
 ln -s $PWD/.bash_profile ~/.bash_profile
 ln -s $PWD/.bashrc ~/.bashrc
 
+echo "Setup VIM"
+rm -rf ~/.vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+

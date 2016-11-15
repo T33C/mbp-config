@@ -1,0 +1,10 @@
+Start VIM
+
+
+:PluginUpdate
+
+exit VIM
+
+cd ~/.vim/bundle/YouCompleteMe
+./install --clang-completer --system-libclang
+
