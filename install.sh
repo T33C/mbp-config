@@ -5,9 +5,9 @@
 clear
 
 echo "Backing up the user dotfiles..."
-cp ~/.vimrc .vimrc.bak+`date +%Y-%m-%d:%H:%M:%S`
-cp ~/.bash_profile .bash_profile.bak+.`date +%Y-%m-%d:%H:%M:%S`
-cp ~/.bashrc .bashrc.bak+`date +%Y-%m-%d:%H:%M:%S`
+cp ~/.vimrc .vimrc.bak`date +%Y-%m-%d:%H:%M:%S`
+cp ~/.bash_profile .bash_profile.bak`date +%Y-%m-%d:%H:%M:%S`
+cp ~/.bashrc .bashrc.bak`date +%Y-%m-%d:%H:%M:%S`
 
 echo "Removing any previous dotfiles..."
 rm ~/.vimrc
