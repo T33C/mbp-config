@@ -24,7 +24,6 @@ set textwidth=120
 set t_Co=256
 syntax on
 
-" colorscheme wombat256
 " turn line numbers on
 set number
 
@@ -32,7 +31,7 @@ set number
 set showmatch
 
 " intelligent comments
-set comments=sl:/*,mb:\ *,elx:\ */
+" set comments=sl:/*,mb:\ *,elx:\ */
 
 " The <ESC> key is too far from home so replace it with the key combo jk, you
 " just need to be careful that if you ever need to type jk then it escape
@@ -58,8 +57,6 @@ inoremap <silent> <ESC>OB <Nop>
 inoremap <silent> <ESC>OC <Nop>
 inoremap <silent> <ESC>OD <Nop>
 
-" NERDTree settings
-nnoremap <F2> :NERDTreeToggle<CR>
 
 " replace the shortcut key \ with the space key which sits nicely under 
 " the thumb
@@ -69,15 +66,24 @@ let mapleader = "\<Space>"
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+filetype off                  " required
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 " Plugin 'valloric/YouCompleteMe'
+
+" File Explorer
 Plugin 'scrooloose/nerdtree'
+nnoremap <F2> :NERDTreeToggle<CR>
+
+" Status Line
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+let g:airline#extensions#tabline#enabled = 1
+set laststatus=2
+
 " Plugin 'kien/ctrip.vim'
 " Plugin 'mattn/emmet-vim'
 call vundle#end()
-filetype plugin indent on
 
